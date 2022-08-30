@@ -1,0 +1,161 @@
+.homeContainer{
+    border: 1px solid black;
+    width: 100vw;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.homeHeader{
+    /* border:  1px solid red; */
+    width: 100%;
+    height: 10%;
+    background-color: #A03037;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: center;
+    gap: 9rem;
+}
+
+.headerChild1{
+    /* border: 1px solid black; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headerChildtwo{
+    /* border: 1px solid rgb(0, 0, 0); */
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageAndText{
+    /* border: 1px solid black; */
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.search{
+    /* border: 1px solid black; */
+    background-color: white;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 2px;
+    border-radius: 8px;
+}
+
+.searchIcon{
+    display: flex;
+    align-items: center;
+}
+
+.inputSearch{
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.bookImage{
+    width: 22px;
+    height: 20px;
+}
+
+.booksText{
+    font-size: 20px;
+    color: white;
+}
+
+.profile{
+    /* border: 1px solid beige; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 0.05rem; */
+}
+
+.cart{
+    /* border: 1px solid beige; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    /* justify-content: space-between; */
+}
+
+.secondSection{
+    /* border:  1px solid red; */
+    width: 86.5%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 170px;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.secondSection-one{
+    /* border: 1px solid red; */
+    width: 80%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* left: 110px; */
+}
+
+secondSection-two{
+    /* border: 1px solid rgb(33, 222, 89); */
+    width: 80%;
+    height: 90%;
+    /* position: relative;
+    left: 200px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.booksDisplay{
+    /* border: 1px solid rgb(33, 222, 89); */
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.secondSection-text{
+    font-weight: 700;
+}
+
+.cartImage{
+    width: 20px;
+    height: 20px;
+}

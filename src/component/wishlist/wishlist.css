@@ -1,0 +1,134 @@
+.wishlistContainer{
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    /* background-color: antiquewhite; */
+}
+
+.wishlist-header{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 12%;
+}
+
+.firstSection-wishlist{
+    /* border: 1px solid rgb(235, 26, 26); */
+    height: 8%;
+    width: 70%;
+    position: relative;
+    left: 180px;
+    display: flex;
+    align-items: center;
+    /* background-color: antiquewhite; */
+}
+
+.firstSection-wishlist-child{
+    position: relative;
+    left: 23px;
+}
+
+.MyWishlist-Bold{
+    font-weight: 700;
+}
+
+.secondSection-wishlist{
+    border: 1px solid rgb(169, 163, 163);
+    height: 80%;
+    width: 70%;
+    position: relative;
+    left: 180px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: antiquewhite; */
+}
+
+.secondSection-myWishlist{
+    /* border: 1px solid rgb(169, 163, 163); */
+    height: 10%;
+    width: 96%;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font-weight: 700;
+    position: relative;
+    left: 23px;
+    
+}
+
+.secondSection-displayMyWishlist{
+    border: 1px solid rgb(169, 163, 163);
+    /* height: 30%; */
+    min-height: 30%;
+    max-height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.wishlistBookData{
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    gap: 7rem;
+    align-items: center;
+}
+
+.wishListBookData-Image{
+    border: 1px solid rgb(169, 163, 163);
+    width: 35%;
+    height: 70%;
+    position: relative;
+    left: 20px;
+}
+
+.wishlist-bookImage{
+    width: 100%;
+    height: 100%;
+}
+
+.wishlistBook-title{
+    font-size: large;
+    font-weight: 700;
+}
+
+.wishlistBook-author{
+    font-size: small;
+    /* font-weight: 700; */
+}
+
+.wishlistBook-price{
+    font-size: large;
+    font-weight: 700;
+}
+
+.wishlistBookData-text{
+    /* border: 1px solid red;
+    width: 65%;
+    height: 70%; */
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    /* justify-content: space-around; */
+}
+
+.wishlistBookData-text1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    right: 50px;
+}
+
+.wishlistBookDeleteIcon{
+    /* border: 1px solid ; */
+    position: relative;
+    right: 20px;
+    top:20px
+}

@@ -1,0 +1,132 @@
+.myCart-Container{
+    /* border: 1px solid red; */
+    width: 100vw;
+    /* height: 100vh; */
+    min-width: 130vh;
+    max-height: 300vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* gap: 0; */
+    /* justify-content: space-around; */
+}
+
+.home-mycarttext{
+    /* border: 1px solid red; */
+    width: 70%;
+    height: 8%;
+    position: relative;
+    left: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.myCart-cartItems{
+    border: 1px solid black;
+    width: 70%;
+    min-height: 25%;
+    max-height: 80%;
+    position: relative;
+    left: 150px;
+    /* display: flex;
+    gap: 1rem; */
+}
+
+.myCart-cartItems-textandbtn{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 17%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* justify-content: center; */
+}
+
+.mycart-text{
+    font-weight: 600;
+}
+
+.myCart-cartItems-text{
+    position: relative;
+    left: 45px;
+    font-size: large;
+    font-weight: 700;
+}
+
+/* .useCurrentLocation{
+    position: relative;
+    right: 40px;
+} */
+
+.myCart-cartItems-btn{
+    /* border: 1px solid black; */
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: relative;
+    right: 40px;
+}
+
+.importCartItems{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 61%;
+}
+
+.placeOrderBtn{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: 40px;
+    bottom: 10px;
+}
+
+.placeOrder-btn{
+    height: 30px;
+}
+
+.addressDetails-mycart{
+    border: 1px solid black;
+    width: 70%;
+    height: 8%;
+    min-height: 8%;
+    max-height: 40%;
+    position: relative;
+    left: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.addDetails-import{
+    /* border: 1px solid black; */
+    width: 95.5%;
+    height: 100%;
+    position: relative;
+    left: 40px;
+}
+
+.addressDetail-text{
+    position: relative;
+    left: 40px;
+}
+
+.cartedOrderSummery{
+    position: relative;
+    left: 40px;
+}
+
+.orderSummery-mycart{
+    border: 1px solid black;
+    width: 70%;
+    /* height: 8%; */
+    min-height: 5%;
+    max-height: 40%;
+    position: relative;
+    left: 150px;
+    display: flex;
+    align-items: center;
+}
+
+

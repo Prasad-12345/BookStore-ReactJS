@@ -1,0 +1,73 @@
+.mainSignupContainer{
+    /* border: 1px solid black; */
+    width: 14vw;
+    height: 55vh;
+}
+
+.signUpContainer{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background-color: aqua;
+    /* justify-content: space-around; */
+    /* margin: auto; */
+}
+
+.signUpContainer2{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.first_nameSignUp{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 20%;
+}
+
+.last_nameSignUp{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 20%;
+}
+
+.emailSignUp{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 20%;
+}
+
+.passwordSignUp{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 20%;
+}
+
+.mobileNumberSignUp{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 20%;
+}
+
+.signUpBtn{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 15%;
+}
+
+.inputFirstName{
+    width: 100%;
+}
+
+.signUp-btn{
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgb(222, 93, 93);
+}

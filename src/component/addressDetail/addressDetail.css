@@ -1,0 +1,196 @@
+.addressDetail-container{
+    /* border: 1px solid black; */
+    width: 65vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    gap: 0.5rem;
+}
+
+.addressDetail-child1{
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 5px;
+}
+
+.customerDetails{
+    font-weight: 700;
+}
+
+.addNewAddress{
+    /* border: 1px solid black; */
+    width: 150px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center */
+}
+
+.addNewAddress-btn{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    /* position: relative;
+    top: 5px;  */
+}
+
+.addressDetail-child2{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.addressDetail-fullName{
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.addressDetail-mobileNumber{
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.fullName-text{
+    font-size: small;
+    /* height: 20px; */
+    /* size: 100px; */
+}
+
+.input-fullName{
+    width: 90%;
+    height: 100%;
+    /* height: 55px; */
+}
+
+.addressDetail-child3{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 20%;
+}
+
+.addressDetail-address{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.address-text{
+    font-size: small;
+}
+
+.addressDetail-child4{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.addressDetail-city{
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.addressDetail-state{
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-city{
+    height: 100%;
+    width: 90%;
+}
+
+.input-state{
+    height: 100%;
+    width: 90%;
+}
+
+.inputAddress{
+    height: 100%;
+}
+.addressDetail-child5{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.addressDetail-pincode{
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.addressDetail-landmark{
+    /* border: 1px solid red; */
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-pincode{
+    height: 100%;
+    width: 90%;
+}
+
+.input-landmark{
+    height: 100%;
+    width: 90%;
+}
+
+.addressDetail-child6{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: spac; */
+}
+
+.input-radio{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.addressDetail-child7{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 5px;
+}
