@@ -13,6 +13,9 @@ import { incrementQtyInCart } from '../../services/dataService';
 import { decrementQtyInCart } from '../../services/dataService';
 import { addBooksToWishlist } from '../../services/dataService';
 import CartItems from '../cartItems/cartItems';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { getCartApiDetails } from '../redux/module';
 
 function BookDetail(props) {
     const [cartData, setCartData] = useState([])
@@ -22,9 +25,16 @@ function BookDetail(props) {
     const [bookId, setBookId] = useState(props.selectedBook.id);
     const[cartQtyObj, setCartQtyObj] = useState({'id':''});
     const[wishlisiObj, setWishlistObj] = useState({'cart_id':''});
-    
+
+    const dispatch = useDispatch();
+    // var batchData = []
+    const batchData = useSelector(state => state.GetCartApiDetails)
+    console.log(batchData);
+    const batchDataRedux = batchData.batchDetails
+    console.log(batchDataRedux);
+    // const batchDetails = batchData.batchDetails
     const incrementQuantityInCart = (obj) => {
-        incrementQtyInCart(obj).then((response)=>console.log(response)).catch((error)=>console.log(error))
+        incrementQtyInCart(obj).then((response)=>{console.log(response); }).catch((error)=>console.log(error))
     }
 
     const decrementQuantityInCart = (obj) => {
@@ -41,8 +51,9 @@ function BookDetail(props) {
 
     const getallBooksFromCart = () => {
         getBooksFromCart().then((response)=>{console.log(response);
+            // dispatch(getCartApiDetails(response.data))
             const filterArray = response.data.filter((cart)=>{
-                if(cart.id === props.selectedBook.id){
+                if(cart.book_id === props.selectedBook.id){
                     setCartBookQuantity(cart.book_quantity)
                     setBtnView(false)
                     setCartQtyObj((prevState)=>({...prevState, id:cart.id}))
@@ -51,7 +62,6 @@ function BookDetail(props) {
                 else{
                     setCartObj((prevState)=>({...prevState, 'book_id': bookId}))
                 }
-                
             });
             
             // }
@@ -61,15 +71,9 @@ function BookDetail(props) {
         // console.log(cartData);
     }
 
-    // const isBookInCart = () => {
-    //     if(props.selectedBook.id === cartData.id){
-    //         setBtnView(false);
-    //         console.log(btnView);
-    //     }
-    // }
-
     useEffect(()=>{
         getallBooksFromCart();
+        // console.log(batchData);
         // isBookInCart();
         // console.log(btnView);
     }, [])
@@ -94,7 +98,7 @@ function BookDetail(props) {
                 }
                 
                 <div className="favAndWish">
-                    <FavoriteBorderIcon className='fav-icon'/>
+                    {/* <FavoriteBorderIcon className='fav-icon'/> */}
                     <input type="button" value="WISHLIST" className='wishlist' onClick={()=>{addBookToWishlist(wishlisiObj)}} />
                 </div>
             </div>
@@ -108,7 +112,7 @@ function BookDetail(props) {
                     <StarOutlineIcon  className='child1-starIcon'/>
                 </div>
                 <div className="righrSection-price">RS.{props.selectedBook.price}</div>
-                <div className='seperate'>--------------------------------------------------------------------------------------------------------------------------------------</div>
+                {/* <div className='seperate'>--------------------------------------------------------------------------------------------------------------------------------------</div> */}
             </div>
             <div className="rightSection-BookDetail-child2">
                 <div className="bookDetail">
@@ -119,7 +123,7 @@ function BookDetail(props) {
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
                     Lorem ipsum dolor sit amet, consetetur sadipscing 
                 </div>
-                <div className='seperate'>--------------------------------------------------------------------------------------------------------------------------------------</div>
+                {/* <div className='seperate'>--------------------------------------------------------------------------------------------------------------------------------------</div> */}
             </div>
             <div className="rightSection-BookDetail-child3">
                 <div className="customerFeedback">

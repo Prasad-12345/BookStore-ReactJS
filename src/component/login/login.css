@@ -60,3 +60,22 @@
     width: 48%;
     height: 80%;
 }
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .loginContainer{
+        width: 60vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:860px) {
+    /* .mainSignupContainer{
+        width: 25vw;
+        height: 40vh;
+    } */
+
+    .loginContainer{
+        width: 35vw;
+        height: 30vh;
+    }
+}

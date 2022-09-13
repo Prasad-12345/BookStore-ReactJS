@@ -8,16 +8,29 @@ import { getBooksFromCart } from '../../services/dataService';
 import AddressDetail from '../addressDetail/addressDetail';
 import OrderSummery from '../orderSummery/orderSummery';
 import { addOrder } from '../../services/dataService';
+import { Link } from 'react-router-dom';
+import { deleteFromCart } from '../../services/dataService';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+// import { getCartApiDetails, getModules } from '../redux/moduleReducer';
+import { getCartApiDetails } from '../redux/module';
+import { connect } from 'react-redux';
 
 function MyCart() {
     const[cartItems, setCartItems] = useState([])
     const[addressDetails, setAddressDetails] = useState(false)
     const[orderSummery, setOrderSummery] = useState(false)
     const[placeOrderObj, setPlaceOrderObj] = useState({'cartId_json':[], 'address_id':1})
+    const [cartId, setCartId] = useState({'id':''})
     // const[cartIdJson, setCartIdJson] = useState([])
+    const dispatch = useDispatch();
 
     const getAllBooksFronCart = () => {
-        getBooksFromCart().then((response)=>{console.log(response); setCartItems(response.data);
+        getBooksFromCart().then((response)=>{console.log(response); 
+          dispatch(getCartApiDetails(response.data));
+          setCartItems(response.data);
+          
+          
           let cartIdJson = []
         const filterArray = response.data.filter((cartId)=>{
             // setPlaceOrderObj((prevState)=>({...prevState, cartId_json:[cartId.id]}))
@@ -32,6 +45,10 @@ function MyCart() {
         }).catch((error)=>console.log(error))
     }
 
+    const batchData = useSelector((state) => state.GetCartApiDetails);
+    console.log(batchData);
+    const cartdetailsRedux = batchData.batchDetails
+    console.log(cartdetailsRedux);
     // const orders = () => {
     //     let cartIdJson = []
     //   for(let i = 0; i < cartItems.length; i++){
@@ -52,11 +69,18 @@ function MyCart() {
       addOrder(obj).then((response)=>console.log(response)).catch((error)=>console.log(error))
     }
 
+    const deleteBooksFromCart = (obj) => {
+      deleteFromCart(obj).then((response)=>(console.log(response))).catch((error)=>console.log(error))
+    }
+
+    const getCartId = (obj) => {
+      setCartId((prevState)=>({...prevState, id:obj.id}))
+    }
     useEffect(()=>{
         getAllBooksFronCart();
     },[])
 
-    const cartedItems = cartItems.map((cartBook)=><CartItems cartBook={cartBook}/>)
+    const cartedItems = cartdetailsRedux&&cartdetailsRedux.map((cartBook)=><CartItems cartBook={cartBook} getCartId={()=>{getCartId(cartBook)}} cartId={cartId}/>)
     const cartedorderSummery = cartItems.map((orderSummery)=><OrderSummery cartedOrderSummery={orderSummery} placeOrderObj={placeOrderObj}/>)
 
   return (
@@ -92,7 +116,11 @@ function MyCart() {
             <div>
               <div className='orderSummery-text'>Order Summery</div>
               <div className="cartedOrderSummery">{cartedorderSummery}</div>
-              <div className="checkout-btn"> <Button variant="contained" className='checkout' onClick={()=>{placeOrder(placeOrderObj)}}>checkout</Button></div>
+              <div className="checkout-btn"> 
+                <Link to={'/OrderSuccess'}>
+                  <Button variant="contained" className='checkout' onClick={()=>{placeOrder(placeOrderObj)}}>checkout</Button>
+                </Link>
+              </div>
             </div>}
             {/* <div className="checkout-btn">
               
@@ -102,4 +130,4 @@ function MyCart() {
   )
 }
 
-export default MyCart
+export default connect()(MyCart)

@@ -31,6 +31,8 @@
     display: flex;
     align-items: center;
     /* justify-content: center */
+    position: relative;
+    right: 33px;
 }
 
 .addNewAddress-btn{
@@ -78,7 +80,7 @@
 
 .input-fullName{
     width: 90%;
-    height: 100%;
+    height: 95%;
     /* height: 55px; */
 }
 
@@ -91,7 +93,7 @@
 .addressDetail-address{
     /* border: 1px solid red; */
     width: 100%;
-    height: 100%;
+    height: 95%;
     display: flex;
     flex-direction: column;
 }
@@ -126,17 +128,18 @@
 }
 
 .input-city{
-    height: 100%;
+    height: 95%;
     width: 90%;
 }
 
 .input-state{
-    height: 100%;
+    height: 95%;
     width: 90%;
 }
 
 .inputAddress{
-    height: 100%;
+    height: 50%;
+    width: 95%;
 }
 .addressDetail-child5{
     /* border: 1px solid red; */
@@ -164,12 +167,12 @@
 }
 
 .input-pincode{
-    height: 100%;
+    height: 95%;
     width: 90%;
 }
 
 .input-landmark{
-    height: 100%;
+    height: 95%;
     width: 90%;
 }
 
@@ -193,4 +196,30 @@
     justify-content: flex-end;
     position: relative;
     bottom: 5px;
+    right: 33px;
+}
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .addressDetail-container{
+        width: 150vw;
+        /* height: 50vh; */
+    }
+
+    .addNewAddress{
+        position: relative;
+        right: 20px;
+    }
+
+    .addressDetail-child7{
+        position: relative;
+        right: 20px;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:860px){
+    .addressDetail-container{
+        width: 100vw;
+        height: 40vh;
+        /* height: 50vh; */
+    }
 }

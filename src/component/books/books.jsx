@@ -20,7 +20,7 @@ function Books(props) {
         <div className="booksBottomSection">
             <div className="booksTitle">{props.book.name}</div>
             <div className="booksAuthor">by {props.book.author}</div>
-            <div className="booksPrice">price : {props.book.price}</div>
+            <div className="booksPrice">Rs.{props.book.price}</div>
         </div>
     </div>
   )

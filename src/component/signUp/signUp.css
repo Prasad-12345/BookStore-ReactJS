@@ -71,3 +71,17 @@
     color: white;
     background-color: rgb(222, 93, 93);
 }
+
+@media screen and (min-width:320px) and (max-width:480px) {
+    .mainSignupContainer{
+        width: 40vw;
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:860px) {
+    .mainSignupContainer{
+        width: 25vw;
+        height: 35vh;
+    }
+}

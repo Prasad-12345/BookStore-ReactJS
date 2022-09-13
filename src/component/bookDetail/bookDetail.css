@@ -38,7 +38,7 @@
 }
 
 .leftSection-BookDetailBottom{
-    /* border: 1px solid black; */
+    border: 1px solid black;
     width: 100%;
     height: 20%;
     display: flex;
@@ -71,7 +71,7 @@
 }
 
 .increment{
-    /* border: 1px solid black; */
+    border: 1px solid black;
     border-radius: 500px;
     font-size: large;
     display: flex;
@@ -90,7 +90,7 @@
 }
 
 .decrement{
-    /* border: 1px solid black; */
+    border: 1px solid black;
     border-radius: 500px;
     display: flex;
     align-items: center;
@@ -102,7 +102,7 @@
     /* background-color: white; */
     opacity: 1;
     color: rgb(49, 43, 43);
-    background: white;
+    /* background: white; */
 }
 
 .favAndWish{
@@ -360,4 +360,35 @@
     position: relative;
     left: 70px;
     font-size: small;
+}
+
+@media screen and (min-width:320px) and (max-width:480px){
+    .bookDetailContainer{
+        width: 235vw;
+        height: 130vh;
+    }
+
+    .righrSection-rating{
+        width: 7%;
+    }
+
+    .leftSection-BookDetail{
+        height: 100vw;
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:860px){
+    .bookDetailContainer{
+        width: 140vw;
+        height: 100vh;
+    }
+
+    .righrSection-rating{
+        width: 7%;
+    }
+
+    .leftSection-BookDetail{
+        height: 50vw;
+    }
 }

@@ -9,7 +9,7 @@ import image from "../images/Image 11.png";
 
 function Wishlist() {
   const [wishlistBook, setWishlistBook] = useState([]);
-  const [wishlistObj, setWishlistObj] = useState({ id: "" });
+  const [wishlistObj, setWishlistObj] = useState({ 'id': "" });
 
   const getAllBooksFromWishlist = () => {
     getBooksFromWishlist()
@@ -37,9 +37,9 @@ function Wishlist() {
 
   return (
     <div className="wishlistContainer">
-      <div className="wishlist-header">
+      {/* <div className="wishlist-header"> */}
         <Header />
-      </div>
+      {/* </div> */}
       <div className="firstSection-wishlist">
         <div className="firstSection-wishlist-child">
             Home / <span className="MyWishlist-Bold">My Wishlist</span></div>
@@ -63,6 +63,7 @@ function Wishlist() {
               </div>
             </div>
             <div className="wishlistBookDeleteIcon">
+              {/* {setWishlistObj({'id':book.id})} */}
               <DeleteOutlineIcon
                 onClick={() => {
                   deleteBooksFromWishlist(wishlistObj);
