@@ -56,3 +56,14 @@ export const addOrder = (obj) => {
     let response = axios.post("http://127.0.0.1:8000/api/placeOrder", obj, headerConfig)
     return response;
 }
+
+export const deleteFromCart = (obj) => {
+    let response = axios.post('http://127.0.0.1:8000/api/deleteBookFromCart', obj, headerConfig)
+    return response;
+}
+
+export const search = (obj) => {
+    console.log(obj);
+    let response = axios.get('http://127.0.0.1:8000/api/searchBook', obj, headerConfig)
+    return response;
+}
